@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>My Bio-data Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        form{
+            border: 3px blueviolet solid;
+            border-radius: 15px;
+            padding: 12px;
+            background-color: silver;
+
+        }
+        h1{
+            color: lawngreen;
+            text-align:center;
+            margin-left: 370px;
+        }
+        body{
+            background-size:cover ;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+<body background="https://www.emergecenter.org/wp-content/uploads/2011/11/Young-Woman-Holding-Books-With-Blue-Background.jpg">
+
+<h1>My Bio-data</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-6 col-md-4">
+
+            <form method="POST">
+                {% csrf_token %}
+            {{ form }}<br>
+           <center> <input type="submit" value="submit" class="btn btn-success">
+           <input type="reset" value="Reset" class="btn btn-danger"></center>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
